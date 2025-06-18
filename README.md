@@ -1,27 +1,3 @@
-The error you're seeing:
-
-```
-Error in user YAML: (<unknown>): did not find expected alphabetic or numeric character while scanning an alias at line 7 column 1
-```
-
-is caused by the line:
-
-```markdown
----
-```
-
-at the top **and bottom** of the README file. In **YAML or some parsers**, triple dashes (`---`) are interpreted as the beginning or end of a YAML document or block, and can cause confusion in contexts like front matter or structured parsers.
-
----
-
-### ✅ **Fix**
-
-Simply **remove the `---` lines** from the beginning and end of the file.
-
-Here is the corrected `README.md` content:
-
----
-
 # TradeWhisper Summarizer
 
 A TypeScript-based service for summarizing content using the OpenAI API.
@@ -94,7 +70,3 @@ Testing is not implemented yet. Running the test script will show a placeholder 
 ```bash
 npm test
 ```
-
----
-
-Let me know if you’d like to include a `tsconfig.json` example or add example input/output for summaries.
