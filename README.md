@@ -1,4 +1,3 @@
-# TradeWhisper Summarizer
 
 A TypeScript-based service for summarizing content using the OpenAI API.
 
